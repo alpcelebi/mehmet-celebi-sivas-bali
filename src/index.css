@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: initial;
+  }
+
+  body {
+    @apply antialiased min-h-screen text-slate-800 dark:text-slate-100 bg-[#FFFDF9] dark:bg-[#080d1a];
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, .font-serif, .font-display {
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Lenis Smooth Scroll Recommended CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* REAL 3D HEXAGONAL HONEYCOMB BACKGROUND PATTERN (LIGHT & DARK) */
+.honeycomb-3d-pattern {
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='97' viewBox='0 0 56 97'%3E%3Cg fill='%23D97706' fill-opacity='0.08' fill-rule='evenodd'%3E%3Cpath d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100L0 83L0 50L28 66L56 50L56 83L28 100' stroke='%23F59E0B' stroke-opacity='0.12' stroke-width='1.5' fill='none'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 56px 97px;
+}
+
+.dark .honeycomb-3d-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='97' viewBox='0 0 56 97'%3E%3Cg fill='%23F59E0B' fill-opacity='0.06' fill-rule='evenodd'%3E%3Cpath d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100L0 83L0 50L28 66L56 50L56 83L28 100' stroke='%23FBBF24' stroke-opacity='0.16' stroke-width='1.5' fill='none'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 56px 97px;
+}
+
+/* 3D Glassmorphism Layer */
+.glass-3d {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.dark .glass-3d {
+  background: rgba(15, 23, 42, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(245, 158, 11, 0.18);
+}
+
+/* 3D Honey Glow Box Shadow */
+.shadow-3d-honey {
+  box-shadow: 0 20px 40px -15px rgba(245, 158, 11, 0.28), 0 0 20px 2px rgba(217, 119, 6, 0.15);
+}
+
+.dark .shadow-3d-honey {
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 25px 3px rgba(245, 158, 11, 0.22);
+}
+
+/* VibeBevvy Ticker Marquee */
+.vibe-marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+/* Space Mono Badge */
+.vibe-badge {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFFDF9;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #080d1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #F59E0B;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D97706;
+}
